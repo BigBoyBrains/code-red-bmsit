@@ -1,0 +1,146 @@
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@font-face {
+    font-family: 'SDDystopianDemo';
+    src: url('../fonts/SDDystopianDemoRegular.eot');
+    src: url('../fonts/SDDystopianDemoRegular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SDDystopianDemoRegular.woff2') format('woff2'),
+        url('../fonts/SDDystopianDemoRegular.woff') format('woff'),
+        url('../fonts/SDDystopianDemoRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'VALORANT';
+    src: url('../fonts/VALORANT-Regular.eot');
+    src: url('../fonts/VALORANT-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/VALORANT-Regular.woff2') format('woff2'),
+        url('../fonts/VALORANT-Regular.woff') format('woff'),
+        url('../fonts/VALORANT-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* General */
+
+body {
+    background-color: black;
+    color: whitesmoke;
+    font-size: 100%;
+    font: inherit;
+    cursor: none;
+}
+
+/* Cursor */
+
+.cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ff0000;
+    pointer-events: none;
+    transition: transform 0.3s ease-out, width 0.3s ease-out, height 0.3s ease-out;
+    z-index: 9999;
+}
+
+.cursor.over-text {
+    mix-blend-mode: darken;
+}
+
+.cursor::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ff0000;
+    border-radius: 50%;
+    mix-blend-mode: multiply;
+}
+
+/* Navbar */
+
+.navbar {
+    position: fixed;
+    left: 0; 
+    top: 0;
+    width: 70px;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.navbar-nav {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-item {
+    margin: 20px 0;
+}
+
+.nav-link {
+    color: whitesmoke;
+    font-size: 1.5rem; 
+    text-align: center;
+    padding: 10px;
+    cursor: none;
+}
+
+.nav-link:hover {
+  color: whitesmoke;
+  transition: none;
+}
+
+.nav-link.active {
+  color: #ff0000;
+}
+
+/* Hero */
+
+.hero {
+    margin-left: 130px;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero h1 {
+    position: relative;
+    font-family: 'SDDystopianDemo', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 25vw;
+    text-align: center;
+    color: rgb(210, 210, 210);
+    line-height: 0.7;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.hero p{
+    font-family: "Roboto Mono", monospace;
+    color: rgb(210, 210, 210);
+}
